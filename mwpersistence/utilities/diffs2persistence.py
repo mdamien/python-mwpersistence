@@ -167,7 +167,7 @@ def diffs2persistence(rev_docs, window_size=50, revert_radius=15, sunset=None,
                 seconds_visible = 0
 
             _, tokens_added, _ = \
-                state.update_opdocs(rev_doc['sha1'], rev_doc['diff']['ops'],
+                state.update_opdocs(rev_doc['sha1'], rev_doc['diff'],
                                     (rev_doc['user'], seconds_visible))
 
             if len(window) == window_size:
